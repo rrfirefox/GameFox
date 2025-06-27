@@ -369,6 +369,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6532051667130006861, guid: 040452d867ad8b64fb1f5175f3febea2, type: 3}
+      propertyPath: knockBackForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532051667130006861, guid: 040452d867ad8b64fb1f5175f3febea2, type: 3}
+      propertyPath: knockBackLength
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -399,8 +407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6956a3c225cb16f44b989507df375083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 6
+  currentHealth: 0
   maxHealth: 6
+  invincibleLength: 1
 --- !u!1 &822487744
 GameObject:
   m_ObjectHideFlags: 0
