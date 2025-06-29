@@ -8,6 +8,8 @@ public class Pickup : MonoBehaviour
     public bool isGem;
     public bool isHeal;
     private bool isCollected;
+
+    public GameObject pickupEffect;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player") && !isCollected)
@@ -15,6 +17,11 @@ public class Pickup : MonoBehaviour
             if(isGem)
             {
                 LevelManager.instance.gemsCollected++;
+
+                UIController.instance.UpdateGemCount();
+
+                Instantiate(pickupEffect, transform.position, transform.rotation);
+
                 isCollected = true;
                 Destroy(gameObject);
             }
