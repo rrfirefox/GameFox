@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public float waitToRespam;
+    public int gemsCollected;
 
     private void Awake()
     {
@@ -32,7 +33,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.transform.position=CheckpointController.instance.spawnPoint;
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth;
-            
+        
     }
 
 }
