@@ -22,6 +22,8 @@ public class Pickup : MonoBehaviour
 
                 Instantiate(pickupEffect, transform.position, transform.rotation);
 
+                AudioManager.instance.PlaySFX(6);
+
                 isCollected = true;
                 Destroy(gameObject);
             }
@@ -31,6 +33,9 @@ public class Pickup : MonoBehaviour
                 if (PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHealth)
                 {
                     PlayerHealthController.instance.HealPlayer();
+                    
+                    AudioManager.instance.PlaySFX(7);
+
                     isCollected = true;
                     Destroy(gameObject);
                 }
